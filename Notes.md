@@ -23,6 +23,7 @@ Le driver et les worker communiquent au travers de Yarn.
 ### Pairs RDD
 
 Les RDD clés/valeurs sont traités de manière particulière par Spark et ont des méthodes supplémentaires :
+
 Transformations : 
   * groupByKey (retounr un RDD (clé, liste de valeur)
   * reduceByKey (retourne un RDD (clé, valeur))
