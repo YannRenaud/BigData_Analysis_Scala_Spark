@@ -19,3 +19,19 @@ Pour éviter ça il faut préciser que l'on veut persister sur disque les donné
 Un job Spark est composé d'un Driver programme sur le master et d'éxecutor sur les workers node.
 Le spark context est défini au niveau du driver. <br>
 Le driver et les worker communiquent au travers de Yarn.
+
+### Pairs RDD
+
+Les RDD clés/valeurs sont traités de manière particulière par Spark et ont des méthodes supplémentaires :
+Transformations : 
+  * groupByKey (retounr un RDD (clé, liste de valeur)
+  * reduceByKey (retourne un RDD (clé, valeur))
+  * join
+  * keys
+  * mapValues
+  * leftOuterJoin / rightOuterJoin
+Actions : 
+  * countByKey
+  
+Pour créer un pairRDD, on peut utiliser un RDD et utiliser la fonction map dessus.
+
